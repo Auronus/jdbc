@@ -1,13 +1,17 @@
 package ru.netology.jdbc.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Entity
 public class Orders {
     @Id
@@ -21,24 +25,4 @@ public class Orders {
     private String productName;
     @Column(nullable = false)
     private int amount;
-
-    public int getId() {
-        return id;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public Customers getCustomers() {
-        return customers;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
 }

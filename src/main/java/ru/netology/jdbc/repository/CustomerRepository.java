@@ -16,9 +16,9 @@ import java.util.stream.Collectors;
 @Repository
 public class CustomerRepository {
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
-    String queryString = read("query.sql");
+    private String queryString = read("query.sql");
 
     public String getProductName(String name) {
         Query query = entityManager.createNativeQuery(queryString, String.class);

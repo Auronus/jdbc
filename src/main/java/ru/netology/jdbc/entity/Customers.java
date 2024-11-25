@@ -21,6 +21,6 @@ public class Customers {
     private String surname;
     @Column(nullable = false)
     private int age;
-    @Column(length = 20)
-    private String phone_number;
+    @Column(name = "phone_number", length = 20)
+    private String phoneNumber;
 }

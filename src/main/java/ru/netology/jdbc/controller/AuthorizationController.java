@@ -8,7 +8,7 @@ import ru.netology.jdbc.repository.CustomerRepository;
 @RestController
 public class AuthorizationController {
     @Autowired
-    CustomerRepository repository;
+    private CustomerRepository repository;
 
     @GetMapping("/products/fetch-product")
     public String getAuthorities(String name) {
